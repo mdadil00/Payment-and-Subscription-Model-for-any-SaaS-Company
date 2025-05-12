@@ -1,0 +1,35 @@
+# CREATE
+http.post./all/course:
+  summary: Create a new Course
+  description: Create Course from database
+  fn: com.biz.all.course.create
+  authn: true   # This enables/disables auth
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/all/Course'
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            type: object 
+
+# # DELETE
+# http.delete./all/course/{id}:
+#   summary: Delete a Course
+#   description: Delete Course from database
+#   fn: com.biz.all.course.delete
+#   params:
+#     - name: id
+#       in: path
+#       required: true
+#       schema:
+#         type: string
+#   responses:
+#     '202':
+#       content:
+#         application/json:
+#           schema:
+#             type: object

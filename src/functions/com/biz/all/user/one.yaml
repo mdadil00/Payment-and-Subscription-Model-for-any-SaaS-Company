@@ -1,0 +1,17 @@
+id: get_user_with_courses
+tasks:
+  - id: fetch_user
+    fn: datasource.all.User.findUnique
+    args:
+      where:
+        id: <% inputs.params.id %>
+      select:
+        email: true
+        courses:
+          select:
+            course:
+              select:
+                id: true
+                name: true
+                description: true
+                price: true

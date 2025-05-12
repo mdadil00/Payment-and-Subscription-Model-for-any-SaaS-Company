@@ -1,0 +1,7 @@
+summary: Fetch Course
+tasks:
+  - id: all_course_one
+    fn: datasource.all.Course.findUnique
+    args:
+      where:
+        id: <% inputs.params.id %>

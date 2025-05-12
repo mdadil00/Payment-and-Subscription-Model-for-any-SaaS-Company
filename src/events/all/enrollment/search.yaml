@@ -1,0 +1,18 @@
+# SEARCH
+http.post./all/enrollment/search:
+  summary: Fetch multiple Enrollment
+  description: Fetch multiple Enrollment from database
+  fn: com.biz.all.enrollment.search
+  authn: false   # This enables/disables auth
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+

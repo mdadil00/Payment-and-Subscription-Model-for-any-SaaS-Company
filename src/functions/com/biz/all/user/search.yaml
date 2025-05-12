@@ -1,0 +1,5 @@
+summary: Fetch many User
+tasks:
+  - id: all_user_search
+    fn: datasource.all.User.findMany
+    args: {}

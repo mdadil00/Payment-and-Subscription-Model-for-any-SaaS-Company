@@ -1,0 +1,6 @@
+summary: Create Enrollment
+tasks:
+  - id: all_enrollment_create
+    fn: datasource.all.Enrollment.create
+    args:
+      data: <% inputs.body %>

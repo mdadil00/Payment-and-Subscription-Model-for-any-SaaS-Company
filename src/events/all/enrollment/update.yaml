@@ -1,0 +1,24 @@
+# UPDATE
+http.put./all/enrollment/{id}:
+  summary: Update a Enrollment
+  description: Update Enrollment from database
+  fn: com.biz.all.enrollment.update
+  authn: false   # This enables/disables auth
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/all/Enrollment'
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '204':
+      content:
+        application/json:
+          schema:
+            type: object
+

@@ -1,0 +1,18 @@
+# ONE
+http.get./all/user/{id}:
+  summary: Fetch User
+  description: Fetch User from database
+  fn: com.biz.all.user.one
+  authn: false   # This enables/disables auth
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: object

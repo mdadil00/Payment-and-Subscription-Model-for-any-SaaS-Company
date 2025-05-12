@@ -1,0 +1,18 @@
+# DELETE
+http.delete./all/course/{id}:
+  summary: Delete a Course
+  description: Delete Course from database
+  fn: com.biz.all.course.delete
+  authn: false   # This enables/disables auth
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '202':
+      content:
+        application/json:
+          schema:
+            type: object

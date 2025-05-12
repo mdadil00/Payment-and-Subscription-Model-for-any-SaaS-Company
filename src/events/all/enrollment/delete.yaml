@@ -1,0 +1,19 @@
+# DELETE
+http.delete./all/enrollment/{id}:
+  summary: Delete a Enrollment
+  description: Delete Enrollment from database
+  fn: com.biz.all.enrollment.delete
+  authn: false   # This enables/disables auth
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '202':
+      content:
+        application/json:
+          schema:
+            type: object
+

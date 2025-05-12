@@ -1,0 +1,7 @@
+summary: Fetch Enrollment
+tasks:
+  - id: all_enrollment_one
+    fn: datasource.all.Enrollment.findUnique
+    args:
+      where:
+        id: <% inputs.params.id %>

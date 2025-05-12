@@ -1,0 +1,7 @@
+summary: Delete Enrollment
+tasks:
+  - id: all_enrollment_delete
+    fn: datasource.all.Enrollment.delete
+    args:
+      where:
+        id: <% inputs.params.id %>

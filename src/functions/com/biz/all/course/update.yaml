@@ -1,0 +1,8 @@
+summary: Update Course
+tasks:
+  - id: all_course_update
+    fn: datasource.all.Course.update
+    args:
+      where:
+        id: <% inputs.params.id %>
+      data: <% inputs.body %>

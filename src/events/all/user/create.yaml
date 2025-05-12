@@ -1,0 +1,18 @@
+# CREATE
+http.post./all/user:
+  summary: Create a new User
+  description: Create User from database
+  fn: com.biz.all.user.create
+  authn: false   # This enables/disables auth
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/all/User'
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            type: object
+

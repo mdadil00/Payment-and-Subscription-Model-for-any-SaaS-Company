@@ -1,0 +1,19 @@
+# DELETE
+http.delete./all/user/{id}:
+  summary: Delete a User
+  description: Delete User from database
+  fn: com.biz.all.user.delete
+  authn: true   # This enables/disables auth
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '202':
+      content:
+        application/json:
+          schema:
+            type: object
+

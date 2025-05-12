@@ -1,0 +1,5 @@
+summary: Fetch many Enrollment
+tasks:
+  - id: all_enrollment_search
+    fn: datasource.all.Enrollment.findMany
+    args: {}

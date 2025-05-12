@@ -1,0 +1,6 @@
+summary: Create Course
+tasks:
+  - id: all_course_create
+    fn: datasource.all.Course.create
+    args:
+      data: <% inputs.body %>

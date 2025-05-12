@@ -1,0 +1,5 @@
+summary: Fetch many Course
+tasks:
+  - id: all_course_search
+    fn: datasource.all.Course.findMany
+    args: {}

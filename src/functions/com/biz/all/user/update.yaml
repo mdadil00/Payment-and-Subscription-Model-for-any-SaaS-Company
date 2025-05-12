@@ -1,0 +1,8 @@
+summary: Update User
+tasks:
+  - id: all_user_update
+    fn: datasource.all.User.update
+    args:
+      where:
+        id: <% inputs.params.id %>
+      data: <% inputs.body %>

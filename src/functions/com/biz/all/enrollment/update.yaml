@@ -1,0 +1,8 @@
+summary: Update Enrollment
+tasks:
+  - id: all_enrollment_update
+    fn: datasource.all.Enrollment.update
+    args:
+      where:
+        id: <% inputs.params.id %>
+      data: <% inputs.body %>

@@ -1,0 +1,18 @@
+# SEARCH
+http.post./all/course/search:
+  summary: Fetch multiple Course
+  description: Fetch multiple Course from database
+  fn: com.biz.all.course.search
+  authn: false   # This enables/disables auth
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+

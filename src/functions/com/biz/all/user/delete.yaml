@@ -1,0 +1,7 @@
+summary: Delete User
+tasks:
+  - id: all_user_delete
+    fn: datasource.all.User.delete
+    args:
+      where:
+        id: <% inputs.params.id %>

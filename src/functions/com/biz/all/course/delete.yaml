@@ -1,0 +1,7 @@
+summary: Delete Course
+tasks:
+  - id: all_course_delete
+    fn: datasource.all.Course.delete
+    args:
+      where:
+        id: <% inputs.params.id %>
